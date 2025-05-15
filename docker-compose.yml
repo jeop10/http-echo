@@ -1,0 +1,10 @@
+name: http-echo
+
+services:
+  http-echo-app:
+    container_name: http-echo-app
+    image: http-echo:test
+    volumes:
+      - ./.env:/app/.env
+    ports:
+      - "8090:80"
